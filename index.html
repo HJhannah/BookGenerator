@@ -1,0 +1,84 @@
+<!--
+    Project: Book Generator
+    Author: Hannah Jones
+    Start Edit Date: 3-26-24
+    End Edit Date: 4-4-24
+-->
+
+<!DOCTYPE html>
+<html lang="'eng">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Recommendations</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+</head>
+<body id="body">
+    <h1 id="heading">Book Recommendation Generator</h1>
+
+    <from id="nameAndGenreForm">
+
+        <!--Name input-->
+        <div id="formSelection">
+        <p class="formSectionTitle">What is your name?</p>
+        <p style="color:red" id="nameError"></p>   
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+        <br>
+        <br>
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+        </div>
+<br>
+        <!--Dropdown input-->
+        <div id="formSelection">
+        <p class="formSectionTitle">What genre are you interested in?</p>
+        <label class="boldText" for="genres">Genres: </label><br>
+        <select name="genres" id="genres" required>
+            <option value="Classic">Classic</option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="Historical Fiction">Historical Fiction</option>
+            <option value="Science Fiction">Science Fiction</option>
+        </select>
+        </div>
+<br>
+        <!--Long or Short checkbox-->
+        <div id="formSelection">
+        <p class="formSectionTitle">Book Length (Short < 200 pages < Long)</p>
+        <p style="color:red" id="checkError"></p>   
+        <input type="checkbox" id="longLength" name="longLength" value="Long">
+        <label for="longLength">Long</label><br>
+        <input type="checkbox" id="shortLength" name="shortLength" value="Short">
+        <label for="shortLength">Short</label><br>
+        </div>
+
+<br>
+        <!--Adult, YA, and Childrens-->
+        <!--put span in label to get rid of spaces if wanted-->
+        <div id="formSelection">
+        <p class="formSectionTitle">Reading Level</p>
+        <p style="color:red" id="radioError"></p>
+        <input type="radio" id="adult" name="readingLvl" value="Adult">
+        <label for="adult">Adult</label>
+        <input type="radio" id="youngAdult" name="readingLvl" value="Young Adult">
+        <label for="youngAdult">Young Adult</label>
+        <input type="radio" id="children" name="readingLvl" value="Children">
+        <label for="children">Children</label>
+        </div>
+<br>
+<br>
+        <input id="submitBttn" type='submit' value="Recommend Book!">
+    </from>
+
+    <div id="recBookSection">
+        <!--Where the new content will go from the script file-->
+    </div>
+    <!-- reset button -->
+    <input id='resetBttn' type="button" value="Generate Another Recommendation!">
+
+
+</body>
+
+</html>
